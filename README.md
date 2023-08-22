@@ -1,4 +1,4 @@
-#  Как работать с репозиторием финального задания
+# Kittigram Final
 
 ![](https://github.com/LenarFazlyev/kittygram_final/actions/workflows/main_kittygram_workflow.yml/badge.svg)
 
