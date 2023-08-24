@@ -177,5 +177,5 @@ jobs:
         token: ${{ secrets.TELEGRAM_TOKEN }}
         message: """
           Деплой Kittygram успешно выполнен! ${{ github.actor }}
-        """
+          """
         
