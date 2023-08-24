@@ -2,27 +2,62 @@
 
 ![](https://github.com/LenarFazlyev/kittygram_final/actions/workflows/main_kittygram_workflow.yml/badge.svg)
 
-## Что нужно сделать
+## О проекте
 
-Настроить запуск проекта Kittygram в контейнерах и CI/CD с помощью GitHub Actions
+Социальная сеть для любителей кошачих.
+Здесь вы можете загружать фотографии котов и кошек, добавить их достижения (проделки), а также просматривать котиков других пользователей
 
-## Как проверить работу с помощью автотестов
+## Стек технологий
 
-В корне репозитория создайте файл tests.yml со следующим содержимым:
-```yaml
-repo_owner: ваш_логин_на_гитхабе
-kittygram_domain: полная ссылка (https://доменное_имя) на ваш проект Kittygram
-taski_domain: полная ссылка (https://доменное_имя) на ваш проект Taski
-dockerhub_username: ваш_логин_на_докерхабе
+- Python
+- Django
+- djangorestframework
+- Nginx
+- gunicorn
+
+## Как запустить проект:
+
+Клонировать репозиторий и перейти в него в командной строке:
+```
+git clone https://github.com/<Ваше Имя>/api_final_yatube.git
 ```
 
-Скопируйте содержимое файла `.github/workflows/main.yml` в файл `kittygram_workflow.yml` в корневой директории проекта.
+Cоздать и активировать виртуальное окружение:
 
-Для локального запуска тестов создайте виртуальное окружение, установите в него зависимости из backend/requirements.txt и запустите в корневой директории проекта `pytest`.
+```
+python -m venv venv
+```
 
-## Чек-лист для проверки перед отправкой задания
+```
+source venv/Script/activate
+```
 
-- Проект Taski доступен по доменному имени, указанному в `tests.yml`.
-- Проект Kittygram доступен по доменному имени, указанному в `tests.yml`.
-- Пуш в ветку main запускает тестирование и деплой Kittygram, а после успешного деплоя вам приходит сообщение в телеграм.
-- В корне проекта есть файл `kittygram_workflow.yml`.
+Установить зависимости из файла requirements.txt:
+
+```
+python -m pip install --upgrade pip
+```
+
+```
+pip install -r requirements.txt
+```
+
+Выполнить миграции:
+
+```
+python manage.py migrate
+```
+
+Запустить проект:
+
+```
+python manage.py runserver
+```
+
+P.S. В директории Kittygram необходимо создать файл .env и прописать необходимые значения переменных. Смотри пример ниже и в файле .env.example
+```
+SECRET_KEY = '<Ваш Ключ>'
+```
+
+## Автор:
+ :grinning: Lenar :sunglasses::boom:
